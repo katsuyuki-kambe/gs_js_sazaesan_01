@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サザエさんの来週予告</title>
+    
+    
+
+    <style>
+      .fadein {
+    opacity: 0;
+    animation: fadein 6s ease forwards;
+    }
+    @keyframes fadein {
+        100% {  opacity: 1;}
+    }
+ 
+/*以下遅延の指定*/
+.txt01 {animation-delay: 1s;}
+.txt02 {animation-delay: 4s;}
+.txt03 {animation-delay: 7s;}
+
+      .yokoku{
+        color:burlywood;
+        font-size: 80px;
+        text-shadow    : 
+       2px  2px 1px #003366,
+      -2px  2px 1px #003366,
+       2px -2px 1px #003366,
+      -2px -2px 1px #003366,
+       2px  0px 1px #003366,
+       0px  2px 1px #003366,
+      -2px  0px 1px #003366,
+       0px -2px 1px #003366; 
+      }
+      #yokokusentaku1{
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        display:block;
+        margin-top: 10px;
+      }
+      .fadein{
+        background-color:yellow;
+        color:black;
+        font-size: 50px;
+        display:inline;
+        margin-top: 10px;
+      }
+      #yokokusentaku2{
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        display:block;
+        margin-top: 10px;
+      }
+      #yokokusentaku3{
+        background-color: black;
+        color: white;
+        font-size: 50px;
+        display:block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      iframe{
+            width: 20px;
+            height: 200px;
+            margin-top: 10px;
+            padding: 20px 10px;
+            
+      }
+        #wrap1{
+              margin:0 auto;
+              width:970px;
+              background: "img/サザエさんの家.png";
+        }
+        img{
+          object-fit: contain;
+          position: absolute;
+          width:auto;
+          height:auto;
+          max-width:100%;
+          max-height:100%;
+        }
+        #dialog1{
+            width: 250px;
+            margin: auto;
+            margin-top: 10px;
+            padding: 20px 10px;
+            display: none;
+            text-align: center;
+            border: 2px solid #aaa;
+            box-shadow: 2px 2px 4px #888;
+            background-color: yellow;
+            border-radius:30px;
+        }
+        
+        #dialog2{
+            width: 250px;
+            margin: auto;
+            margin-top: 10px;
+            padding: 20px 10px;
+            display: none;
+            text-align: center;
+            border: 2px solid #aaa;
+            box-shadow: 2px 2px 4px #888;
+            background-color: yellow;
+            border-radius:30px;
+        }
+        
+        #dialog3{
+            width: 250px;
+            margin: auto;
+            margin-top: 10px;
+            padding: 20px 10px;
+            display: none;
+            text-align: center;
+            border: 2px solid #aaa;
+            box-shadow: 2px 2px 4px #888;
+            background-color: yellow;
+            border-radius:30px;
+        }
+        
+        
+        #kekka1{
+                width: 600px;
+                height:600px;
+            display: none;
+            border:3px solid #000000;
+            border-radius:20px;
+            margin-left:0px;
+        }
+        
+        #kekka2{
+                width: 600px;
+                height:600px;
+            display: none;
+            border:3px solid #000000;
+            border-radius:20px;
+            margin-left:0px;
+        }
+        
+        #kekka3{
+                width: 600px;
+                height:600px;
+            display: none;
+            border:3px solid #000000;
+            border-radius:20px;
+            margin-left:0px;
+        }
+        
+        .moji01{
+             font-size:28px;
+             font-weight:bold;
+        }
+        
+        .btn-square-raised {
+          display: inline-block;
+          padding: 0.5em 1em;
+          text-decoration: none;
+          background:red;
+          color: black;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          border-bottom: solid 3px red;
+          border-radius: 3px;/*角の丸み*/
+          font-weight: bold;
+          text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+        }
+        
+        .btn-square-raised:active {
+          /*ボタンを押したとき*/
+          -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          border-bottom: none;
+        }
+        
+        .selectradio {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          .selectradio .selectradio-item {
+            margin: 5px 0;
+            padding: 0; }
+          .selectradio input[type="radio"] {
+            display: none; }
+          .selectradio input[type="radio"]:checked + label {
+            background: gray;
+            color: white;
+
+         }
+          .selectradio .selectradio-label {
+          display: inline-block;
+          padding: 0.5em 1em;
+          text-decoration: none;
+          background: gray;
+          color:white;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+          border-bottom: solid 3px #627295;
+          border-radius: 3px;/*角の丸み*/
+          font-weight: bold;
+          text-shadow: -1px -1px rgba(255, 255, 255, 0.44), 1px 1px rgba(0, 0, 0, 0.38);
+        }
+        .selectradio.selectradio-inline .selectradio-item {
+          display: inline-block; }
+        .selectradio.selectradio-inline .selectradio-label {
+          display: inline-block;
+           }
+        
+        .selectradio.selectradio-inline .selectradio-item:active {
+          /*ボタンを押したとき*/
+          -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          border-bottom: none;
+        }
+        
+        .selectradio.selectradio-inline .selectradio-label:active {
+          /*ボタンを押したとき*/
+          -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          border-bottom: none;
+        }
+        
+        .clear-element{
+           clear:both;
+        }
+        
+        
+        body {
+            -webkit-text-size-adjust: 100%;
+        }
+        </style>
+</head>
+
+<body background = "img/サザエさんの家.png">
+    <div id="wrap1">
+        <div class="moji01" style="margin-top:50px;">
+        <center>
+        <p class ="yokoku">来週のサザエさんは。。。</p>
+        </center>
+      </div>
+        <button id ="yokokusentaku1">予告①</button><p class ="fadein txt01">カツオ、課題が終わらず徹夜</p>
+        <button id ="yokokusentaku2">予告②</button><p class ="fadein txt02">波平、遅く来た青春</p>
+        <button id ="yokokusentaku3">予告③</button><p class ="fadein txt03">タラちゃん、波平の真実を知る</p>
+
+        <div style="margin-left:300px; margin-bottom:30px;">
+            <canvas
+                id="screen"
+                width="600"
+                height="600"
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                style="border:3px solid #000000; border-radius:20px;"></canvas>
+        
+        <div id="kekka1">
+        <img src="img/グー.png">
+        </div>
+        
+        <div id="kekka2">
+        <img src="img/チョキ.png">
+        </div>
+        
+        <div id="kekka3">
+        <img src="img/パー.png">
+        </div>
+        
+        <div class="u-mb-20">
+        
+          <ul class="selectradio selectradio-inline">
+            <li class="selectradio-item">
+              <input type="radio" name="radiogroup2" id="rock" value="1">
+              <label for="rock" class="selectradio-label">グー</label>
+            </li>
+            <li class="selectradio-item">
+              <input type="radio" name="radiogroup2" id="scissors" value="2">
+              <label for="scissors" class="selectradio-label">チョキ</label>
+            </li>
+            <li class="selectradio-item">
+              <input type="radio" name="radiogroup2" id="paper" value="0">
+              <label for="paper" class="selectradio-label">パー</label>
+            </li>
+        
+          </ul>
+        </div>
+        
+        <div class="clear-elements"></div>
+        
+                <button id="restart"class="btn-square-raised">スタート</button>
+        
+        </div>
+        
+        
+        
+        
+        <div id="dialog1">
+            <div id="hikiwake" class="moji01">引き分けです!<br>うふふふふ♪</div>
+        </div>
+        
+        <div id="dialog2">
+            <div id="make" class="moji01">負けです!<br>うふふふふ♪</div>
+        </div>
+        
+        <div id="dialog3">
+            <div id="kati" class="moji01">勝ちです!<br>うふふふふ♪</div>
+        </div>
+        <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/jp/album/sazaesan-ep/829758714"></iframe>
+        </div>
+        
+            <script src="./main1.js"></script>    
+</body>
+</html>
